@@ -1,0 +1,27 @@
+<center><h1>Show Event Form</h1>
+
+<label>Sport:</label>
+<%= link_to @event.sport.name, sport_path(@event.sport.id) %>
+<br><br><br>
+
+<label>Title:</label>
+<%= @event.title %>
+<br><br><br>
+
+<label>Date:</label>
+<%= @event.date %>
+<br><br><br>
+
+<label>Time:</label>
+<%= @event.time %>
+<br><br><br>
+
+<label>Location:</label>
+<%= @event.location %>
+<br><br><br>
+
+<label>Duration:</label>
+<%= @event.duration %>
+<br><br><br>
+
+<%= link_to "All Sports", sports_path %></center>
