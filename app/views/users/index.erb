@@ -1,0 +1,7 @@
+<center><h1>Players</h1></center>
+
+<ul>
+<% @users.each do |u| %>
+  <li><%= link_to u.name, u %></li>
+<% end %>
+</ul>
