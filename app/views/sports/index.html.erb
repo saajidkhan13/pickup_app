@@ -1,0 +1,9 @@
+<center><h1>List of Sports</h1>
+
+<% @sports.each do |s| %>
+
+<label>Name:</label> <%= link_to s.name, sport_path(s) %><br><br><br>
+<% end %>
+
+<%= link_to "New Sport Form", new_sport_path %>
+</center>

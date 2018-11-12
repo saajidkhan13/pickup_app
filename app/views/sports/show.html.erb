@@ -1,0 +1,12 @@
+<center><h1>Sports Show Page</h1>
+
+<label>Name:</label>
+<%= @sport.name %>
+<br><br><br>
+<label>Roster Count:</label>
+<%= @sport.player_count %>
+<br><br><br>
+<%= link_to "Edit", edit_sport_path(@sport) %>
+<br><br><br>
+<%= link_to "Back", sports_path %>
+</center>
