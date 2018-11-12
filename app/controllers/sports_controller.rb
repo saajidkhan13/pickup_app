@@ -8,24 +8,27 @@ class SportsController < ApplicationController
   def show
   end
 
-  def method
-    #code
+  def new
+    @sport = Sport.new
   end
 
-  def method
-    #code
+  def create
+    @sport = Sport.create(sport_params)
+    redirect_to @sport
   end
 
-  def method
-    #code
+  def edit
+
   end
 
-  def method
-    #code
+  def update
+    @sport.update(sport_params)
+    redirect_to @sport
   end
 
-  def method
-    #code
+  def destroy
+    @sport.destroy
+    redirect_to sports_path
   end
 
   private
