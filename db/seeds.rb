@@ -13,3 +13,6 @@ sports = ["Basketball", "Kickball", "Soccer", "Yoga", "Zumba"]
 20.times do
   User.create(name: Faker::Name.name, email:Faker::Internet.email, password:"password", age: age_range.sample, gender:"male")
 end
+
+User.create(name: "Laura", email: "laura@gmail.com", password: "123", age: 26, gender: "female")
+User.create(name: "Jeff", email: "jeff@gmail.com", password: "456", age: 28, gender: "male")
