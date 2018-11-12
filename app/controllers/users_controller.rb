@@ -13,6 +13,16 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def login_form
+    @user = User.new
+    # renders login form
+  end
+
+  def login
+    @user = User.find_by(email: params[:user][:email], password: params[:user][:password])
+    redirect_to @user
+  end
+
   def create
     @user = User.create(user_params)
     redirect_to @user
