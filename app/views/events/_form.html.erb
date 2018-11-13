@@ -6,7 +6,8 @@
   <%= f.text_field :title %>
   <br><br><br>
   <label>Date:</label>
-  <%= f.text_field :date %>
+  <%= datetime_select(:event, :date, {}, {:class => 'custom-select'}) %>
+
   <br><br><br>
   <label>Time:</label>
   <%= f.number_field :time %>
