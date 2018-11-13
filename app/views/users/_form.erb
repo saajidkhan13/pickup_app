@@ -1,18 +1,21 @@
 <%= form_for @user do |f| %>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %><br>
-  <br>
-  <%= f.label :email %><br>
-  <%= f.text_field :email %><br>
-  <br>
-  <%= f.label :password %><br>
-  <%= f.password_field :password %><br>
-  <br>
-  <%= f.label :age %><br>
-  <%= f.number_field :age %><br>
-  <br>
-  <%= f.label :gender %><br>
-  <%= f.text_field :gender %><br>
-  <br>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name %>
+  <br><br>
+  <%= f.label "Email:" %>
+  <%= f.text_field :email %>
+  <br><br>
+  <%= f.label "Password:" %>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.label "Age:" %>
+  <%= f.number_field :age %>
+  <br><br>
+  <%= f.label "Gender:" %>
+  <%= f.radio_button :gender, 'Male' %> Male
+  <%= f.radio_button :gender, 'Female' %> Female
+  <%= f.radio_button :gender, 'Non-binary/third gender' %> Non-binary/third gender
+  <%= f.radio_button :gender, 'Prefer not to say' %> Prefer not to say
+  <br><br>
   <%= f.submit %>
 <% end %>

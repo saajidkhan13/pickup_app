@@ -1,14 +1,13 @@
-<center><h1>Login</h1>
+<h1>Login</h1>
 
 <h2><%= flash[:notice] %></h2>
 
 <%= form_tag login_path do %>
   <%= label_tag :email %>
   <%= text_field_tag :email %>
-  <br><br><br>
+  <br>
   <%= label_tag :password %>
   <%= password_field_tag :password %>
   <br>
   <%= submit_tag "Login" %>
 <% end %>
-</center>

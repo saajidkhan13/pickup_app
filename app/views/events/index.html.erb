@@ -1,7 +1,8 @@
-<center><h1>All Events</h1>
+<h1>All Activities</h1>
+<ul>
 <% @events.each do |e| %>
-<label>Title of Event:</label>
-<%= e.title %>
+<li>Activity: <%= link_to e.title, e %></li><br>
 <% end %>
+</ul>
 <br><br><br>
-<%= link_to "New Event", new_event_path %></center>
+<%= link_to "New Event", new_event_path %>
