@@ -1,35 +1,30 @@
 class UsersController < ApplicationController
   before_action :find_user, only: %i[show edit update destroy]
+  skip_before_action :authorized, only: %i[new create]
 
   def index
     @users = User.all
   end
 
   def show
-    #code
   end
 
   def new
     @user = User.new
   end
 
-  def login_form
-    @user = User.new
-    # renders login form
-  end
-
-  def login
-    @user = User.find_by(email: params[:user][:email], password: params[:user][:password])
-    redirect_to @user
-  end
-
   def create
     @user = User.create(user_params)
-    redirect_to @user
+
+    if @user.valid?
+      login_user(@user)
+      redirect_to @user
+    else
+      render :new
+    end
   end
 
   def edit
-    #code
   end
 
   def update
@@ -39,6 +34,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
+    redirect_to signup_path
   end
 
   private
