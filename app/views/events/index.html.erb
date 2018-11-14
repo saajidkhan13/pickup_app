@@ -1,8 +1,11 @@
-<h1>All Activities</h1>
-<ul>
+<center><h1>All Events</h1>
 <% @events.each do |e| %>
-<li>Activity: <%= link_to e.title, e %></li><br>
+<label>Event Name:</label>
+<%= link_to e.title, event_path(e) %><br><br><br>
 <% end %>
-</ul>
 <br><br><br>
-<%= link_to "New Event", new_event_path %>
+
+  <button class="ui blue basic button">
+    <%= link_to "New Event", new_event_path %>
+  </button>
+</center>

@@ -6,17 +6,19 @@
   <%= f.text_field :title %>
   <br><br><br>
   <label>Date:</label>
-  <%= f.date_field :date %>
+  <%= datetime_select(:event, :date, {}, {:class => 'custom-select'}) %>
+
   <br><br><br>
   <label>Time:</label>
-  <%= f.time_field :time %>
+  <%= f.number_field :time %>
   <br><br><br>
   <label>Location</label>
   <%= f.text_field :location %>
   <br><br><br>
-  <label>Duration: (time in mins)</label>
+  <label>Duration:</label>
   <%= f.number_field :duration %>
   <br><br><br>
-  <%= f.submit %>
+  <button class="ui blue basic button">Submit
+  </button>
 
 <% end %>
