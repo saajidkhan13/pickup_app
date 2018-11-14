@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :groups
-  has_many :sports, through: :groups
+  has_many :user_events
+  has_many :events, through: :user_events
   has_secure_password
 end
