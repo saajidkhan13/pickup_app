@@ -21,18 +21,16 @@
   </head>
 
   <body>
-    <h1>hey laura was here</h1>
-    <p>will u approve me helping you?</p>
    <nav>
-     <div class="inverted menu">
-       <a class="teal item">
+     <div class="ui menu">
+       <a class="header item">
      <% if logged_in? %>
        <%= link_to "Logout", logout_path, method: :delete %>
      <% else %>
        <%= link_to "Login", login_path%>
      <% end %>
    </a>
-     <a class="teal item">
+     <a class="item">
        <%= link_to "Events", events_path %>
      </a>
 

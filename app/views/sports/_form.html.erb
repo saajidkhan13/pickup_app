@@ -1,9 +1,13 @@
-<%= form_for @sport do |f| %>
-<label>Name:</label>
-  <%= f.text_field :name %>
-  <br><br><br>
-  <label>Roster Count:</label>
-  <%= f.number_field :player_count %>
-  <br><br><br>
-  <%= f.submit %>
-<% end %>
+<div class="field_image">
+  <div class="ui raised very padded text container segment" id="splash-box">
+    <%= form_for @sport do |f| %>
+    <label>Name:</label>
+      <%= f.text_field :name %>
+      <br><br><br>
+      <label>Roster Count:</label>
+      <%= f.number_field :player_count %>
+      <br><br><br>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

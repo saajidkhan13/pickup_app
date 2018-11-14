@@ -1,15 +1,18 @@
 <div class="field_image">
-<div class="ui raised very padded text container segment" id="splash-box">
-<center><h1>All Events</h1>
-<% @events.each do |e| %>
-<label>Event Name:</label>
-<%= link_to e.title, event_path(e) %><br><br><br>
-<% end %>
-<br><br><br>
-
-  <button class="ui blue basic button">
-    <%= link_to "New Event", new_event_path %>
-  </button>
-</div>
-</div>
-</center>
+<div class="ui raised very padded text container segment scrolling content" id="splash-box">
+  <% @events.each do |e| %>
+  <table class="ui celled table">
+    <thead>
+      <tr><th>Event Name</th>
+        <th>Sport</th>
+        <th>Location</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td data-label="Event Name"><%= link_to e.title, event_path(e) %></td>
+          <td data-label="Sport"> <%= e.sport.name %>   </td>
+          <td data-label="Location"><%= e.location%></td>
+        </tr>
+  </tbody>
+  </table>
+  <% end %>
