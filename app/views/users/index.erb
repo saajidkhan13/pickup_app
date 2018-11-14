@@ -1,11 +1,16 @@
 <center><h1>Players</h1></center>
 
-<% @users.each do |u| %>
 <div class="ui middle aligned animated list">
-  <div class ="item">
-    <div class="content">
-
-  <div class="header"><%= link_to u.name, u %></div><br><br><br>
-<% end %>
-</div>
+  <% @users.each do |u| %>
+    <div class ="item">
+      <div class="content">
+        <div class="header">
+          <%= link_to u.name, u %>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  <% end %>
 </div>
