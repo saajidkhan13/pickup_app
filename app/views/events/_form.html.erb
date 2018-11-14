@@ -5,18 +5,17 @@
   <label>Title:</label>
   <%= f.text_field :title %>
   <br><br><br>
-  <label>Date:</label>
-  <%= datetime_select(:event, :date, {}, {:class => 'custom-select'}) %>
-
-  <br><br><br>
-  <label>Time:</label>
-  <%= f.number_field :time %>
-  <br><br><br>
   <label>Location</label>
   <%= f.text_field :location %>
   <br><br><br>
   <label>Duration:</label>
-  <%= f.number_field :duration %>
+  <%= f.number_field :duration %> (in mins)
+  <br><br><br>
+  <label>Date and Time:</label>
+  <%= f.datetime_select :date_and_time, :ampm => true, :minute_step => 15 %>
+  <br><br><br>
+  <label>Attendees</label>
+  <%= f.number_field :player_count %>
   <br><br><br>
   <button class="ui blue basic button">Submit
   </button>
