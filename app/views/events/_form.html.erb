@@ -3,7 +3,7 @@
   <div class="column"></div>
    <!-- second column -->
   <div class="column">
-  <%= form_for @event do |f| %>
+  <%= form_for @event, class: "ui form" do |f| %>
   <label>Sport:</label>
     <%= f.collection_select :sport_id, Sport.all, :id, :name %>
     <br><br><br>

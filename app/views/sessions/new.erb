@@ -4,7 +4,7 @@
 
     <h2><%= flash[:notice] %></h2>
     <div class="login">
-    <%= form_tag login_path do %>
+    <%= form_tag login_path, class: "ui form" do %>
       <%= label_tag :email %>
       <%= text_field_tag :email %>
       <br><br>
