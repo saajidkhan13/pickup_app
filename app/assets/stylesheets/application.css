@@ -1,14 +1,14 @@
 /* id selector */
 /* has a "#" before the name of the id */
 #splash-box {
-  top: 200px;
-  background-color: red;
+  top: 100px;
   text-align: center;
+  opacity: 0.9;
 }
  /* class selector */
 /* has a "." before the name of the class */
-.splash-image {
-  background-image: url("https://cms-assets.tutsplus.com/uploads/users/1604/posts/28720/final_image/Pizza-Pattern-Final-Result.jpg");
+.field_image {
+  background-image: url("https://images.unsplash.com/photo-1491324213149-48ea4e31bf50?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6031934972d8699bee4460946f3c5329&auto=format&fit=crop&w=830&q=80");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

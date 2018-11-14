@@ -1,24 +1,32 @@
-<%= form_for @event do |f| %>
-<label>Sport:</label>
-  <%= f.collection_select :sport_id, Sport.all, :id, :name %>
-  <br><br><br>
-  <label>Title:</label>
-  <%= f.text_field :title %>
-  <br><br><br>
-  <label>Date:</label>
-  <%= datetime_select(:event, :date, {}, {:class => 'custom-select'}) %>
+<div class="ui three column grid">
+  <!-- first column -->
+  <div class="column"></div>
+   <!-- second column -->
+  <div class="column">
+  <%= form_for @event do |f| %>
+  <label>Sport:</label>
+    <%= f.collection_select :sport_id, Sport.all, :id, :name %>
+    <br><br><br>
+    <label>Title:</label>
+    <%= f.text_field :title %>
+    <br><br><br>
+    <label>Date:</label>
+    <%= datetime_select(:event, :date, {}, {:class => 'custom-select'}) %>
 
-  <br><br><br>
-  <label>Time:</label>
-  <%= f.number_field :time %>
-  <br><br><br>
-  <label>Location</label>
-  <%= f.text_field :location %>
-  <br><br><br>
-  <label>Duration:</label>
-  <%= f.number_field :duration %>
-  <br><br><br>
-  <button class="ui blue basic button">Submit
-  </button>
-
-<% end %>
+    <br><br><br>
+    <label>Time:</label>
+    <%= f.number_field :time %>
+    <br><br><br>
+    <label>Location</label>
+    <%= f.text_field :location %>
+    <br><br><br>
+    <label>Duration:</label>
+    <%= f.number_field :duration %>
+    <br><br><br>
+    <button class="ui blue basic button">Submit
+    </button>
+    <% end %>
+  </div>
+ <!-- third column -->
+<div class="column"></div>
+</div>
