@@ -7,15 +7,16 @@ Sport.create(name: "Basketball")
 Sport.create(name: "Kickball")
 Sport.create(name: "Soccer")
 Sport.create(name: "Yoga")
-Sport.create(name: "Zumba")
+Sport.create(name: "Dodgeball")
+Sport.create(name: "Yoga")
+Sport.create(name: "Bootcamp")
 
-Event.create(sport_id: Sport.all.sample.id, title: "Pickup Game in Central Park", date: "November 16th, 2018", time: "0235", location: "Central Park", duration: 60)
-
-age_range = (16..50).to_a
+age_range = (16..70).to_a
 sports = ["Basketball", "Kickball", "Soccer", "Yoga", "Zumba"]
+gender = ["Male", "Female", "Non-binary/third gender", "Prefer not to say"]
 
-20.times do
-  User.create(name: Faker::Name.name, email:Faker::Internet.email, password:"password", age: age_range.sample, gender:"male")
+50.times do
+  User.create(name: Faker::Name.name, email:Faker::Internet.email, password:"password", age: age_range.sample, gender: gender.sample)
 end
 
 User.create(name: "Laura Kim", email: "laura@gmail.com", password: "123", age: 26, gender: "female")
