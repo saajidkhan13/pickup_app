@@ -1,14 +1,17 @@
-<center><h1>Login</h1></center>
+<div class="field_image">
+<div class="ui raised very padded text container segment" id="splash-box">
+    <center><h1>Login</h1></center>
 
-<h2><%= flash[:notice] %></h2>
-<div class="login">
-<%= form_tag login_path do %>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <br><br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <br>
-  <button class="ui blue basic button">Login</button>
-<% end %>
-</div>
+    <h2><%= flash[:notice] %></h2>
+    <div class="login">
+    <%= form_tag login_path, class: "ui form" do %>
+      <%= label_tag :email %>
+      <%= text_field_tag :email %>
+      <br><br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+      <br>
+      <button class="ui blue basic button">Login</button>
+    <% end %>
+    </div>
+  </div>
