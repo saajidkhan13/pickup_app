@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 2018_11_14_180825) do
     t.string "title"
     t.string "location"
     t.integer "duration"
-    t.datetime "date_and_time"
-    t.integer "player_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "date_and_time"
+    t.integer "player_count"
   end
 
   create_table "groups", force: :cascade do |t|
