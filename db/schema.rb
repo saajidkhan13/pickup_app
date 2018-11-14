@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_14_180825) do
+ActiveRecord::Schema.define(version: 2018_11_14_221642) do
 
   create_table "events", force: :cascade do |t|
     t.integer "sport_id"
@@ -19,19 +19,20 @@ ActiveRecord::Schema.define(version: 2018_11_14_180825) do
     t.integer "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "date_and_time"
     t.integer "player_count"
-  end
-
-  create_table "groups", force: :cascade do |t|
-    t.integer "sport_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.date "date"
+    t.time "time"
   end
 
   create_table "sports", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_events", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
