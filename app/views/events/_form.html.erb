@@ -1,32 +1,24 @@
-<div class="ui three column grid">
-  <!-- first column -->
-  <div class="column"></div>
-   <!-- second column -->
-  <div class="column">
+
+
   <%= form_for @event, class: "ui form" do |f| %>
   <label>Sport:</label>
     <%= f.collection_select :sport_id, Sport.all, :id, :name %>
-    <br><br><br>
+    <br>
     <label>Title:</label>
     <%= f.text_field :title %>
-    <br><br><br>
+    <br>
     <label>Date:</label>
-    <%= datetime_select(:event, :date, {}, {:class => 'custom-select'}) %>
-
-    <br><br><br>
-    <label>Time:</label>
-    <%= f.number_field :time %>
-    <br><br><br>
+    <%= f.datetime_select :date_and_time, :ampm => true, :minute_step => 15 %>
+    <br>
     <label>Location</label>
     <%= f.text_field :location %>
-    <br><br><br>
+    <br>
     <label>Duration:</label>
     <%= f.number_field :duration %>
-    <br><br><br>
+    <br>
+    <label>Player Count:</label>
+    <%= f.number_field :player_count %>
+    <br>
     <button class="ui blue basic button">Submit
     </button>
     <% end %>
-  </div>
- <!-- third column -->
-<div class="column"></div>
-</div>
