@@ -1,4 +1,4 @@
-<center><h1>Show Event Form</h1>
+<h1>Show Event Form</h1>
 
 <label>Sport:</label>
 <%= link_to @event.sport.name, sport_path(@event.sport.id) %>
@@ -24,4 +24,4 @@
 <%= @event.duration %>
 <br><br><br>
 
-<%= link_to "All Sports", sports_path %></center>
+<%= link_to "All Sports", sports_path %>
