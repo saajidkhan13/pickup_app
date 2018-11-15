@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-  before_action :find_event, only: [:show, :edit, :update, :destroy]
+  before_action :find_event, only: [:show, :edit, :update, :destroy, :join_event]
+  before_action :current_user, only: [:join_event]
 
   def index
     @events = Event.all
@@ -29,6 +30,11 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     redirect_to events_path
+  end
+
+  def join_event
+    UserEvent.create(user_id: @user.id, event_id: @event.id)
+    redirect_to @event
   end
 
   private

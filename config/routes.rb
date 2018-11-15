@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sports
 
+  get "events/:id/join_event", to: "events#join_event", as: "join_event"
   get "/", to: "welcome#home", as: "landing"
   get "signup", to: "users#new", as: "signup"
   get "login", to: "sessions#new", as: "login"
