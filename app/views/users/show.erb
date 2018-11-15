@@ -6,5 +6,8 @@
     <%= link_to "Join an Activity", events_path %>
 
     <h3>Activites You're Signed Up For</h3>
+    <% @user.events.each do |event| %>
+    <%= link_to event.title, event_path(event) %>
+    <% end %>
   </div>
 </div>

@@ -9,7 +9,6 @@
         </tr></thead>
         <% @events.each do |e| %>
         <table class="ui fixed table">
-
           <tbody>
             <tr>
               <td data-label="Event Name"><%= link_to e.title, event_path(e) %></td>

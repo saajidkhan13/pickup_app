@@ -4,6 +4,8 @@
   top: 100px;
   text-align: center;
   opacity: 0.9;
+  overflow: auto;
+  height:75vh;
 }
  /* class selector */
 /* has a "." before the name of the class */
