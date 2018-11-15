@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'welcome/root'
   resources :events
   resources :users
   resources :sports
