@@ -1,21 +1,26 @@
-<%= form_for @user do |f| %>
+<%= form_for @user do |f|%>
   <%= f.label "Name:" %>
+  <div class="ui left icon input"></div><i class="user icon"></i>
   <%= f.text_field :name %>
   <br><br>
   <%= f.label "Email:" %>
+  <div class="ui left icon input"></div><i class="envelope outline icon"></i>
   <%= f.text_field :email %>
   <br><br>
   <%= f.label "Password:" %>
+  <div class="ui left icon input"></div><i class="lock icon"></i>
   <%= f.password_field :password %>
   <br><br>
   <%= f.label "Age:" %>
+  <div class="ui left icon input"></div><i class="id card outline icon"></i>
   <%= f.number_field :age %>
   <br><br>
   <%= f.label "Gender:" %>
-  <%= f.radio_button :gender, 'Male' %> Male
-  <%= f.radio_button :gender, 'Female' %> Female
-  <%= f.radio_button :gender, 'Non-binary/third gender' %> Non-binary/third gender
-  <%= f.radio_button :gender, 'Prefer not to say' %> Prefer not to say
+  <div class="ui left icon input"></div><i class="mercury icon"></i>
+  <%= f.radio_button :gender, 'Male', class: "radio-spacing" %> Male 
+  <%= f.radio_button :gender, 'Female', class: "radio-spacing" %> Female
+  <%= f.radio_button :gender, 'Non-binary/third gender', class: "radio-spacing" %> Non-binary/third gender
+  <%= f.radio_button :gender, 'Prefer not to say', class: "radio-spacing" %> Prefer not to say
   <br><br>
   <%= f.submit %>
 <% end %>
