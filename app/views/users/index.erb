@@ -1,16 +1,16 @@
-<center><h1>Players</h1></center>
-
-<div class="ui middle aligned animated list">
-  <% @users.each do |u| %>
-    <div class ="item">
-      <div class="content">
-        <div class="header">
-          <%= link_to u.name, u %>
+<div class="field_image">
+  <div class="ui raised very padded text container segment scrolling content" id="splash-box">
+    <div class="ui middle aligned animated list">
+      <h1>Players</h1>
+      <% @users.each do |u| %>
+        <div class ="item">
+          <div class="content">
+            <div class="header">
+              <%= link_to u.name, u %><br>
+            </div>
+          </div>
         </div>
-        <br>
-        <br>
-        <br>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>

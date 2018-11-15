@@ -10,18 +10,13 @@
         <%= @event.title %>
       <br><br>
 
-<label>Date:</label>
-<%= @event.date %>
-<br><br><br>
-
-<label>Time:</label>
-<%= @event.time %>
-<br><br><br>
-
-      <label>Time:</label>
-        <%= @event.time %>
+      <label>Date:</label>
+      <%= @event.date.strftime("%m/%d/%Y") %>
       <br><br>
 
+      <label>Time:</label>
+        <%= @event.time.strftime("%I:%M") %>
+      <br><br>
 
       <label>Location:</label>
         <%= @event.location %>

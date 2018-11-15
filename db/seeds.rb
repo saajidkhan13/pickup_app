@@ -14,9 +14,11 @@ Sport.create(name: "Bootcamp")
 #event seed variables
 duration = [30, 45, 60, 75, 90]
 player_count = (6..20).to_a
+now = Time.now
+a_day_ago = now - 60 * 60 * 24
 
-30.times do
-  Event.create(sport_id: Sport.all.sample.id, title: Faker::Ancient.titan, location: Faker::Address.community, duration: duration.sample, date: Faker::Date.forward(30), time: Time.now, player_count: player_count.sample)
+15.times do
+  Event.create(sport_id: Sport.all.sample.id, title: Faker::Ancient.titan, location: Faker::Address.community, duration: duration.sample, date: Faker::Date.forward(30), time: rand(a_day_ago..now), player_count: player_count.sample)
 end
 
 # user seed variables
@@ -24,7 +26,7 @@ age_range = (16..70).to_a
 sports = ["Basketball", "Kickball", "Soccer", "Yoga", "Zumba"]
 gender = ["Male", "Female", "Non-binary/third gender", "Prefer not to say"]
 
-48.times do
+23.times do
   User.create(name: Faker::Name.name, email:Faker::Internet.email, password:"password", age: age_range.sample, gender: gender.sample)
 end
 
