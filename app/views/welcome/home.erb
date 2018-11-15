@@ -1,28 +1,25 @@
-<div class="field_image">
+<div class="field_image" style="height: 150%;">
 
   <div class="ui raised very padded text container segment" id="splash-box">
-    <img src="<%= image_path("pickuplogo.png") %>" style="width: 40%;">
-    <h1>Welcome to Pickup</h1>
-    <!-- If you already have an account <%= link_to "login", login_path %>.<br>
-    Otherwise, please <%= link_to "create an account", signup_path %>. -->
-    <div class="ui placeholder segment">
+    <img src="<%= image_path("pickuplogo.png") %>" style="width: 50%;">
+
+    <!-- <div class="ui placeholder segment">
       <div class="ui animated button" tabindex="0">
-        <div class="visible content">
+        <div class="visible content"> Login
+        </div>
+        <div class="hidden content">
+          <i class="right arrow icon"></i>
           <%= link_to "Login", login_path %><br>
+
         </div>
-        <div class="hidden content">
-          <i class="right arrow icon"></i>
-        </div>
-      </div>
+      </div> -->
+      <button class="fluid ui button">
+        <%= link_to "Login", login_path %>
+      </button>
       <div class='ui horizontal divider'>Or</div>
-      <div class="ui animated button" tabindex="0">
-        <div class="visible content">
-            <%= link_to "Create An Account", signup_path %><br>
-        </div>
-        <div class="hidden content">
-          <i class="right arrow icon"></i>
-        </div>
+      <button class="fluid ui button">
+        <%= link_to "Create An Account", signup_path %>
+      </button>
       </div>
     </div>
-  </div>
 </div>
