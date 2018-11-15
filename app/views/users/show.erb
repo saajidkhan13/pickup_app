@@ -1,10 +1,26 @@
+<nav>
+  <div class="ui secondary pointing menu">
+      <%= link_to @user.name, user_path(@user), class:"item active" %>
+      <%= link_to "Events", events_path, class:"item" %>
+      <%= link_to "Sports", sports_path, class:"item" %>
+    <div class="right menu">
+      <%= link_to "Settings", edit_user_path(@user), class: "ui item"%>
+      <%= link_to "Logout", logout_path, method: :delete, class:"ui item" %>
+    </div>
+  </div>
+</nav>
 <div class="field_image">
   <div class="ui raised very padded text container segment" id="splash-box">
     <h1><%= @user.name %></h1>
-    <%= link_to "Create an Activity", new_event_path %>
     <br>
-    <%= link_to "Join an Activity", events_path %>
-
+    <button class="ui green basic button">
+      <%= link_to "Create an Activity", new_event_path %>
+    </button>
+    <!-- <br><br> -->
+    <button class="ui blue basic button">
+      <%= link_to "Join an Activity", events_path %>
+    </button>
+    <br><br>
     <h3>Activites You're Signed Up For</h3>
     <% @user.events.each do |event| %>
     <%= link_to event.title, event_path(event) %>

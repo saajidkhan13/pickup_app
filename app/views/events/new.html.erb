@@ -1,6 +1,23 @@
+<nav>
+  <div class="ui secondary pointing menu">
+      <%= link_to @user.name, user_path(@user), class:"item" %>
+      <%= link_to "Events", events_path, class:"item active" %>
+      <%= link_to "Sports", sports_path, class:"item" %>
+    <div class="right menu">
+      <!-- <a class="ui item"> -->
+      <%= link_to "Logout", logout_path, method: :delete, class:"ui item" %>
+      <!-- </a> -->
+    </div>
+  </div>
+</nav>
 <div class="field_image">
 <div class="ui raised very padded text container segment" id="splash-box">
-  <h1>New Event Form</h1>
+  <h1>New Activity</h1>
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |e| %>
+      <%= p e %><br>
+    <% end %>
+  <% end %>
 <%= render 'form' %>
 </div>
 </div>

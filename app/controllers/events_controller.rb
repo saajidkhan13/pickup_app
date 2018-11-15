@@ -15,7 +15,12 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(event_params)
-    redirect_to @event
+    if @event.valid?
+      redirect_to @event
+    else
+      flash[:errors] = @event.errors.full_messages
+      redirect_to new_event_path
+    end
   end
 
   def edit
@@ -24,7 +29,12 @@ class EventsController < ApplicationController
 
   def update
     @event.update(event_params)
-    redirect_to @event
+    if @event.valid?
+      redirect_to @event
+    else
+      flash[:errors] = @event.errors.full_messages
+      redirect_to edit_event_path(@event)
+    end
   end
 
   def destroy

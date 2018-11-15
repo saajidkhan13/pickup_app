@@ -14,7 +14,12 @@ class SportsController < ApplicationController
 
   def create
     @sport = Sport.create(sport_params)
-    redirect_to @sport
+    if @sport.valid?
+      redirect_to @sport
+    else
+      flash[:errors] = @sport.errors.full_messages
+      redirect_to new_sport_path
+    end
   end
 
   def edit

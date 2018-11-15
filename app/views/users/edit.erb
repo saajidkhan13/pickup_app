@@ -1,7 +1,17 @@
-<h1>Edit Your Account</h1>
-
+<nav>
+  <div class="ui secondary pointing menu">
+      <%= link_to @user.name, user_path(@user), class:"item active" %>
+      <%= link_to "Events", events_path, class:"item" %>
+      <%= link_to "Sports", sports_path, class:"item" %>
+    <div class="right menu">
+      <%= link_to "Settings", edit_user_path(@user), class: "ui item"%>
+      <%= link_to "Logout", logout_path, method: :delete, class:"ui item" %>
+    </div>
+  </div>
+</nav>
 <div class="field_image">
   <div class="ui raised very padded text container segment scrolling content" id="splash-box">
+    <h1>Update Your Account Settings</h1>
     <%= render 'form' %>
   </div>
 </div>

@@ -21,22 +21,6 @@
   </head>
 
   <body>
-   <nav>
-     <div class="ui menu">
-       <a class="header item">
-     <% if logged_in? %>
-       <%= link_to "Logout", logout_path, method: :delete %>
-     <% else %>
-       <%= link_to "Login", login_path%>
-     <% end %>
-   </a>
-     <a class="item">
-       <%= link_to "Events", events_path %>
-     </a>
-
-  </div>
-
-   </nav>
     <%= yield %>
   </body>
 </html>

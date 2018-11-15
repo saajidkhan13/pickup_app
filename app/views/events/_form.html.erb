@@ -1,27 +1,34 @@
-
-
+<div class="ui form">
   <%= form_for @event, class: "ui form" do |f| %>
   <label>Sport:</label>
+      <div class="ui left icon input"></div><i class="lightning bolt icon"></i>
     <%= f.collection_select :sport_id, Sport.all, :id, :name %>
     <br>
     <label>Title:</label>
+      <div class="ui left icon input"></div><i class="pencil alternate icon"></i>
     <%= f.text_field :title %>
-    <br>
+    <br><br>
     <label>Date:</label>
+      <div class="ui left icon input"></div><i class="calendar alternate icon"></i>
     <%= f.text_field :date %>
-    <br>
+    <br><br>
     <label>Time:</label>
+      <div class="ui left icon input"></div><i class="clock icon"></i>
     <%= f.text_field :time %>
-    <br>
-    <label>Location</label>
+    <br><br>
+    <label>Location:</label>
+      <div class="ui left icon input"></div><i class="map icon"></i>
     <%= f.text_field :location %>
-    <br>
+    <br><br>
     <label>Duration:</label>
+      <div class="ui left icon input"></div><i class="stopwatch icon"></i>
     <%= f.number_field :duration %>
-    <br>
+    <br><br>
     <label>Player Count:</label>
+      <div class="ui left icon input"></div><i class="users icon"></i>
     <%= f.number_field :player_count %>
-    <br>
+    <br><br>
     <button class="ui blue basic button">Submit
     </button>
     <% end %>
+</div>
