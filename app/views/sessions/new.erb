@@ -8,9 +8,11 @@
     <div class="login">
     <%= form_tag login_path, class: "ui form" do %>
       <%= label_tag :email %>
+      <div class="ui left icon input"></div><i class="envelope icon"></i>
       <%= text_field_tag :email %>
       <br><br>
       <%= label_tag :password %>
+      <div class="ui left icon input"></div><i class="lock icon"></i>
       <%= password_field_tag :password %>
       <br><br>
       <button class="ui blue basic button">Login</button>

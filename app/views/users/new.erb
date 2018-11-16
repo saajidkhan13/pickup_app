@@ -1,14 +1,3 @@
-<nav>
-  <div class="ui secondary pointing menu">
-      <%= link_to @user.name, user_path(@user), class:"item active" %>
-      <%= link_to "Events", events_path, class:"item" %>
-      <%= link_to "Sports", sports_path, class:"item" %>
-    <div class="right menu">
-      <%= link_to "Settings", edit_user_path(@user), class: "ui item"%>
-      <%= link_to "Logout", logout_path, method: :delete, class:"ui item" %>
-    </div>
-  </div>
-</nav>
 <div class="field_image" style="height: 150%;">
   <div class="ui raised very padded text container segment" id="splash-box">
     <h1>Create a New Account</h1>

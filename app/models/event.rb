@@ -8,5 +8,5 @@ class Event < ApplicationRecord
   validates :duration, presence: true, numericality: { greater_than_or_equal_to: 30 , less_than_or_equal_to: 300}
   validates :date, presence: true
   validates :time, presence: true
-  validates :player_count, presence: true, numericality: { greater_than_or_equal_to: 5 }
+  validates :player_count, presence: true
 end
