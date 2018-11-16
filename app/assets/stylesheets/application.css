@@ -22,3 +22,35 @@
 .radio-spacing {
   margin-left: 10px;
 }
+
+.yoga_image {
+  background-image: url("https://images.unsplash.com/photo-1511897990913-3b337a8010d3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8425a0972235c78e1723a81b5c38a45c&auto=format&fit=crop&w=1350&q=80");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.yogadude_image {
+  background-image: url("https://images.unsplash.com/photo-1530240785721-8b425978ceae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a9e9b2b20f2c547589786f8ccd994b2d&auto=format&fit=crop&w=1376&q=80");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.track_image {
+  background-image: url("https://images.unsplash.com/photo-1474546652694-a33dd8161d66?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=04bf1ed464c62345a6b4de1b5a3e8ecb&auto=format&fit=crop&w=762&q=80");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.basketwater_image {
+  background-image: url("https://images.unsplash.com/photo-1474224017046-182ece80b263?ixlib=rb-0.3.5&s=6993e95662a84eacbb32b8328460190f&auto=format&fit=crop&w=1350&q=80");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

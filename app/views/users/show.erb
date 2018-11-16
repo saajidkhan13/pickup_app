@@ -1,5 +1,5 @@
 <nav>
-  <div class="ui secondary pointing menu">
+    <div class="ui secondary pointing menu">
       <%= link_to @user.name, user_path(@user), class:"item active" %>
       <%= link_to "Events", events_path, class:"item" %>
       <%= link_to "Sports", sports_path, class:"item" %>
@@ -8,7 +8,10 @@
       <%= link_to "Logout", logout_path, method: :delete, class:"ui item" %>
     </div>
   </div>
+
 </nav>
+
+
 <div class="field_image">
   <div class="ui raised very padded text container segment" id="splash-box">
     <h1><%= @user.name %></h1>
@@ -22,8 +25,16 @@
     </button>
     <br><br>
     <h3>Activites You're Signed Up For</h3>
-    <% @user.events.each do |event| %>
-    <%= link_to event.title, event_path(event) %>
+     <% @user.events.each do |event| %>
+
+    <div class='ui equal width grid'>
+      <div class='column'>
+        <div class='ui segment'><%= link_to event.title, event_path(event) %></div>
+      </div>
+      <div class='eight wide column'>
+        <div class='ui segment'><%= event.date %></div>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
