@@ -3,5 +3,5 @@ class Sport < ApplicationRecord
   has_many :groups
   has_many :users, through: :groups
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 end

@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   has_many :user_events
   has_many :users, through: :user_events
 
-  validates :title, presence: true
+  validates :title, presence: true, uniqueness: true
   validates :location, presence: true
   validates :duration, presence: true, numericality: { greater_than_or_equal_to: 30 , less_than_or_equal_to: 300}
   validates :date, presence: true

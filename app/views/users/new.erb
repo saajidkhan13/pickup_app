@@ -1,6 +1,11 @@
 <div class="field_image" style="height: 150%;">
   <div class="ui raised very padded text container segment" id="splash-box">
     <h1>Create a New Account</h1>
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |e| %>
+        <%= p e %><br>
+      <% end %>
+    <% end %>
     <div class="ui form">
     <%= render 'form' %>
   </div>
