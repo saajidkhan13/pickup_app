@@ -1,24 +1,6 @@
-# README
+Overview of PickUp
+Allows roommates to organize apartment data such as bills and upcoming events collaboratively
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Built entirely through Ruby on Rails
+Designed the database schema and configured ActiveRecord associations
+Used custom CSS and Semantic UI to design front end
