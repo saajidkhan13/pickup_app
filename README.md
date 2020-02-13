@@ -1,4 +1,5 @@
 Overview of PickUp
+
 Allows roommates to organize apartment data such as bills and upcoming events collaboratively
 
 Built entirely through Ruby on Rails
